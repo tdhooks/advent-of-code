@@ -8,4 +8,5 @@ COPY ./${TARGET_PROJECT} /golf
 
 RUN rustc main.rs
 
-ENTRYPOINT ["./main", "./input/input.txt"]
+ENTRYPOINT [ "./main" ]
+CMD [ "./input/input.txt" ]

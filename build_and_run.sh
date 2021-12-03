@@ -4,5 +4,11 @@ else
     target_project=$1
 fi
 
+if [ -z "$2" ]; then
+    target_file="input.txt"
+else
+    target_project=$2
+fi
+
 docker build -t advent-of-code:${target_project} --build-arg TARGET_PROJECT=${target_project} . && \
-docker run --rm advent-of-code:${target_project}
+docker run --rm advent-of-code:${target_project} ./input/${target_file}
