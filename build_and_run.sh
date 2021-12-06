@@ -7,7 +7,7 @@ fi
 if [ -z "$2" ]; then
     target_file="input.txt"
 else
-    target_project=$2
+    target_file=$2
 fi
 
 docker build -t advent-of-code:${target_project} --build-arg TARGET_PROJECT=${target_project} . && \
