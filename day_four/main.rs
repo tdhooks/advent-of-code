@@ -38,7 +38,7 @@ impl Board {
     fn sum_unmarked(&self) -> u32 {
         // Sums up all unmarked cells and returns result
         self.cells.iter().fold(0, |acc, cell| match cell {
-            Marked(num) => _,
+            Marked(num) => (),
             Unmarked(num) => acc += 1,
         })
     }
